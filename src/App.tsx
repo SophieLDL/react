@@ -15,7 +15,7 @@ const pokemonList = [
 
 function App() {
 
-  const [pokemonName, setPokemonName] = useState("bulbasaur")
+  const [pokemonName, setPokemonName] = useState("Bulbasaur")
 
   const pokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
 
