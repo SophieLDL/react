@@ -1,3 +1,4 @@
+import { useParams } from 'react-router';
 import classes from './PokemonCard.module.css'
 
 interface PokemonProps {
@@ -9,6 +10,8 @@ interface PokemonProps {
 }
 
 function PokemonCard({ pokemon }: PokemonProps) {
+    const { pokemonName } = useParams();
+    console.log(useParams)
     return (
         <>
             <figure className={classes.card} style={{ backgroundColor: pokemon.backgroundColor }}>{pokemon.imgSrc !== undefined ? (

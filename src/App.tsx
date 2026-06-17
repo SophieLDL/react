@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard.tsx";
 import NavBar from "./components/NavBar.tsx";
+import { Outlet } from "react-router";
 // import styles from "./components/PokemonCard.module.css"
 
 const pokemonList = [
@@ -51,7 +52,8 @@ function App() {
   return (
     <div>
       <NavBar setPokemonName={setPokemonName} pokemonList={pokemonList} pokemonName={pokemonName} />
-      <PokemonCard pokemon={pokemon} />
+      {/* <PokemonCard pokemon={pokemon} /> */}
+      <Outlet />
     </div>
   );
 }
