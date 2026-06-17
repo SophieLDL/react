@@ -6,13 +6,18 @@ interface Pokemon {
 interface NavBarProps {
     setPokemonName: (name: string) => void;
     pokemonList: Pokemon[];
+    pokemonName: string;
 }
 
-function NavBar({ setPokemonName, pokemonList }: NavBarProps) {
+function NavBar({ setPokemonName, pokemonList, pokemonName }: NavBarProps) {
+
+    { pokemonName === "Pikachu" && alert("Pika Pikachu !!!") }
+
     return <nav>
         {pokemonList.map((pokemon) => (
             <button key={pokemon.name} onClick={() => setPokemonName(pokemon.name)}>{pokemon.name}</button>
-        ))}
+        ))
+        }
     </nav>
 }
 
